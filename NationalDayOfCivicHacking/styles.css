@@ -28,6 +28,10 @@ core-toolbar {
   margin-bottom: 1.5em;
 }
 
+google-map {
+  height: 400px;
+}
+
 paper-button {
   margin: 0.5em 1em 0.5em 0;
   width: 10em;
