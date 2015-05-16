@@ -1,68 +1,70 @@
 <!doctype html>
 
-<html>
-<head>
-  <title>National Day Of Civic Hacking 2015</title>
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-
-  <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
-
-  <link rel="import" href="bower_components/app-router/app-router.html">
-  <link rel="import" href="bower_components/core-animated-pages/core-animated-pages.html">
-  <link rel="import" href="bower_components/core-animated-pages/transitions/slide-from-right.html">
-  <link rel="import" href="bower_components/core-drawer-panel/core-drawer-panel.html">
-  <link rel="import" href="bower_components/core-header-panel/core-header-panel.html">
-  <link rel="import" href="bower_components/core-icons/core-icons.html">
-  <link rel="import" href="bower_components/core-item/core-item.html">
-  <link rel="import" href="bower_components/core-menu/core-menu.html">
-  <link rel="import" href="bower_components/core-toolbar/core-toolbar.html">
-  <link rel="import" href="bower_components/font-roboto/roboto.html">
-  <link rel="import" href="bower_components/paper-button/paper-button.html">
-  <link rel="import" href="bower_components/paper-icon-button/paper-icon-button.html">
-  <link rel="import" href="bower_components/paper-tabs/paper-tabs.html">
-
-  <link rel="stylesheet" href="styles.css">
-</head>
-
-<body unresolved fullbleed>
+<html lang="en">
   
-  <template is="auto-binding">
-    <core-drawer-panel>
-      <core-header-panel drawer>
-        <core-toolbar>Code for Tucson</core-toolbar>
-        <core-menu selected="0" selectedItem="{{item}}">
-          <core-item label="Schedule"></core-item>
-          <core-item label="Projects"></core-item>
-          <core-item label="Participate"></core-item>
-        </core-menu>
-      </core-header-panel>
-      <core-header-panel main>
-        <core-toolbar>
-          <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
-          <div flex>National Day of Civic Hacking 2015</div>
-          <paper-menu-button>
-            <paper-icon-button icon="refresh"></paper-icon-button>
-          </paper-menu-button>
-        </core-toolbar>
-        <core-animated-pages selected="{{item}}" transitions="slide-from-right">
-          <section>
-            <div layout vertical center center-justified>Schedule</div>
-          </section>
-          <section>
-            <div layout vertical center center-justified>Projects</div>
-          </section>
-          <section>
-            <div layout vertical center center-justified>Participate</div>
-          </section>
-        </core-animated-pages>    
-      </core-header-panel>
-    </core-drawer-panel>  
-  </template>
-
-  <script src="main.js"></script>
+  <head>
+    
+    <title>National Day Of Civic Hacking 2015</title>
   
-</body>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+  
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    
+    <link rel="import" href="elements.html">
+  
+    <link rel="stylesheet" href="styles.css">
+    
+  </head>
+  
+  <body unresolved fullbleed>
+    
+    <template is="auto-binding" id="app">
+      <core-drawer-panel>
+        <core-header-panel drawer>
+          <core-toolbar>Code for Tucson</core-toolbar>
+          <core-menu selected="{{selected}}">
+            <core-item label="Schedule"></core-item>
+            <core-item label="Challenges"></core-item>
+            <core-item label="Participate"></core-item>
+          </core-menu>
+        </core-header-panel>
+        <core-header-panel main>
+          <core-toolbar>
+            <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
+            <div flex>National Day of Civic Hacking 2015</div>
+            <paper-menu-button>
+              <paper-icon-button icon="refresh"></paper-icon-button>
+            </paper-menu-button>
+          </core-toolbar>
+          <core-animated-pages selected="{{selected}}" transitions="slide-from-right">
+            <section>
+              <h1>Schedule of Events for NDoCH Tucson 2015</h1>
+              <div>Schedule content</div>
+            </section>
+            <section>
+              <h1>Civic Hacking Challenges for 2015</h1>
+              <div>Civic Hacking Challenges content</div>
+            </section>
+            <section>
+              <h1>How to Participate in NDoCH Tucson 2015</h1>
+              <div>
+                <p>Code for Tucson will be hosting our National Day of Civic Hacking event at CoLab Workspace in downtown Tucson.</p>
+                <google-map latitude="32.223071" longitude="-110.970887" fitToMarkers>
+                  <google-map-marker latitude="32.223071" longitude="-110.970887"
+                    draggable="false" title="CoLab Workspace"></google-map-marker>
+                </google-map>
+                <paper-button raised>Register</paper-button>
+              </div>
+            </section>
+          </core-animated-pages>
+        </core-header-panel>
+      </core-drawer-panel>  
+    </template>
+  
+    <script src="main.js"></script>
+    
+  </body>
+  
 </html>
