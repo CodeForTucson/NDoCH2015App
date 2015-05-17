@@ -13,7 +13,8 @@
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
     
     <link rel="import" href="elements.html">
-  
+    <link rel="import" href="register-button.html">
+
     <link rel="stylesheet" href="styles.css">
     
   </head>
@@ -25,9 +26,9 @@
         <core-header-panel drawer>
           <core-toolbar>Code for Tucson</core-toolbar>
           <core-menu selected="{{selected}}">
-            <core-item label="Schedule"></core-item>
-            <core-item label="Challenges"></core-item>
-            <core-item label="Participate"></core-item>
+            <core-item label="Schedule" core-drawer-toggle></core-item>
+            <core-item label="Challenges" core-drawer-toggle></core-item>
+            <core-item label="Participate" core-drawer-toggle></core-item>
           </core-menu>
         </core-header-panel>
         <core-header-panel main>
@@ -51,18 +52,22 @@
               <h1>How to Participate in NDoCH Tucson 2015</h1>
               <div>
                 <p>Code for Tucson will be hosting our National Day of Civic Hacking event at CoLab Workspace in downtown Tucson.</p>
-                <google-map latitude="32.223071" longitude="-110.970887" zoom="12">
+                <google-map latitude="32.223071" longitude="-110.970887" zoom="18">
+                  <google-map-marker latitude="32.223071" longitude="-110.970887"
+                    text="CoLab Workspace"></google-map-marker>
                 </google-map>
-                <paper-button raised>Register</paper-button>
+                <p>
+                  <button is="register-button"></button>
+                </p>
               </div>
             </section>
           </core-animated-pages>
         </core-header-panel>
       </core-drawer-panel>  
     </template>
-  
-    <script src="main.js"></script>
     
+    <script src="main.js"></script>
+
   </body>
   
 </html>
