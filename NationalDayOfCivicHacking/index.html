@@ -13,6 +13,7 @@
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
     
     <link rel="import" href="elements.html">
+    <link rel="import" href="schedule-card.html">
     <link rel="import" href="register-button.html">
 
     <link rel="stylesheet" href="styles.css">
@@ -42,7 +43,13 @@
           <core-animated-pages selected="{{selected}}" transitions="slide-from-right">
             <section>
               <h1>Schedule of Events for NDoCH Tucson 2015</h1>
-              <div>Schedule content</div>
+              <div layout vertical center>
+                <schedule-card>
+                  <h2>Wednesday, 27 May</h2>
+                  <h2>1:00 PM - 5:00 PM</h2>
+                  <p>Build Your First Android App</p>
+                </schedule-card>
+              </div>
             </section>
             <section>
               <h1>Civic Hacking Challenges for 2015</h1>

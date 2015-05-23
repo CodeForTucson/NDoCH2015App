@@ -22,7 +22,21 @@ a, a:hover {
 
 core-drawer-panel {
   background-color: white;
+}
+
+drawer {
+  background-color: #333;
+  color: black;
   opacity: 1;
+}
+
+core-menu {
+  background-color: white;
+  opacity: 1;
+}
+
+core-item {
+  color: black;
 }
 
 core-toolbar {
