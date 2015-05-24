@@ -21,22 +21,17 @@ a, a:hover {
 }
 
 core-drawer-panel {
-  background-color: white;
+  background-color: GhostWhite;
 }
 
 drawer {
-  background-color: #333;
-  color: black;
+  background-color: GhostWhite;
   opacity: 1;
 }
 
 core-menu {
-  background-color: white;
+  background-color: GhostWhite;
   opacity: 1;
-}
-
-core-item {
-  color: black;
 }
 
 core-toolbar {
@@ -46,6 +41,11 @@ core-toolbar {
   font-size: 20px;
   font-weight: 400;
   margin-bottom: 1.5em;
+}
+
+core-collapse {
+  overflow: hidden;
+  height: 0px;
 }
 
 google-map {
@@ -61,24 +61,4 @@ paper-button {
 paper-button[right] {
   position: fixed;
   right: 0;
-}
-
-paper-checkbox {
-  margin-left: 1em;
-}
-
-paper-fab {
-  position: absolute !important;
-  top: 35px;
-  right: 1em;
-  z-index: 1;
-}
-
-paper-tabs {
-  background-color: #5677fc;
-  color: #fff;
-}
-
-paper-tabs[noink][nobar] paper-tab.core-selected {
-  color: #ffff8d;
 }

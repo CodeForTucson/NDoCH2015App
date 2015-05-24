@@ -13,26 +13,25 @@
     <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
     
     <link rel="import" href="elements.html">
-    <link rel="import" href="schedule-card.html">
     <link rel="import" href="register-button.html">
 
     <link rel="stylesheet" href="styles.css">
     
   </head>
   
-  <body unresolved fullbleed>
+  <body unresolved fullbleed layout vertical>
     
     <template is="auto-binding" id="app">
       <core-drawer-panel>
-        <core-header-panel drawer>
+        <core-header-panel drawer flex>
           <core-toolbar>Code for Tucson</core-toolbar>
           <core-menu selected="{{selected}}">
-            <core-item label="Schedule" core-drawer-toggle></core-item>
-            <core-item label="Challenges" core-drawer-toggle></core-item>
-            <core-item label="Participate" core-drawer-toggle></core-item>
+            <paper-item label="Schedule">Schedule</paper-item>
+            <paper-item label="Challenges">Challenges</paper-item>
+            <paper-item label="Participate">Participate</paper-item>
           </core-menu>
         </core-header-panel>
-        <core-header-panel main>
+        <core-header-panel main flex>
           <core-toolbar>
             <paper-icon-button icon="menu" core-drawer-toggle></paper-icon-button>
             <div flex>National Day of Civic Hacking 2015</div>
@@ -43,13 +42,55 @@
           <core-animated-pages selected="{{selected}}" transitions="slide-from-right">
             <section>
               <h1>Schedule of Events for NDoCH Tucson 2015</h1>
-              <div layout vertical center>
-                <schedule-card>
-                  <h2>Wednesday, 27 May</h2>
-                  <h2>1:00 PM - 5:00 PM</h2>
-                  <p>Build Your First Android App</p>
-                </schedule-card>
-              </div>
+              <div class="heading" onclick="document.querySelector('#event1').toggle();">8:00 AM - 9:00 AM</div>
+              <core-collapse id="event1" class="core-collapse-closed">
+                <div class="content">
+                  <div>Register, mingle, and enjoy breakfast provided by our sponsors!</div>
+                </div>
+              </core-collapse>
+              <div class="heading" onclick="document.querySelector('#event2').toggle();">9:00 AM - 9:30 AM</div>
+              <core-collapse id="event2" class="core-collapse-closed">
+                <div class="content">
+                  <div>Keynote speaker</div>
+                </div>
+              </core-collapse>
+              <div class="heading" onclick="document.querySelector('#event3').toggle();">9:30 AM - 10:00 AM</div>
+              <core-collapse id="event3" class="core-collapse-closed">
+                <div class="content">
+                  <div>Project pitches</div>
+                </div>
+              </core-collapse>
+              <div class="heading" onclick="document.querySelector('#event4').toggle();">10:00 AM - 11:30 AM</div>
+              <core-collapse id="event4" class="core-collapse-closed">
+                <div class="content">
+                  <div>Form teams and brainstorm</div>
+                </div>
+              </core-collapse>
+              <div class="heading" onclick="document.querySelector('#event5').toggle();">11:30 AM - 12:30 PM</div>
+              <core-collapse id="event5" class="core-collapse-closed">
+                <div class="content">
+                  <div>Lunch!</div>
+                </div>
+              </core-collapse>
+              <div class="heading" onclick="document.querySelector('#event6').toggle();">12:30 PM - 5:30 PM</div>
+              <core-collapse id="event6" class="core-collapse-closed">
+                <div class="content">
+                  <div>Hack on your civic project</div>
+                </div>
+              </core-collapse>
+              <div class="heading" onclick="document.querySelector('#event7').toggle();">5:30 PM - 6:00 PM</div>
+              <core-collapse id="event7" class="core-collapse-closed">
+                <div class="content">
+                  <div>Project presentations</div>
+                </div>
+              </core-collapse>
+              <div class="heading" onclick="document.querySelector('#event8').toggle();">6:00 PM - 7:00 PM</div>
+              <core-collapse id="event8" class="core-collapse-closed">
+                <div class="content">
+                  <div>Awards and Drinks</div>
+                </div>
+              </core-collapse>
+              
             </section>
             <section>
               <h1>Civic Hacking Challenges for 2015</h1>
